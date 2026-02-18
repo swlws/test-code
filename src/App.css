@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app.light {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app.dark {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+.app-header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app.dark .app-header {
+  background-color: #2d2d2d;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-brand h1 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.nav-links a.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.app.dark .user-name {
+  color: #999;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.app.dark .theme-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.app-footer {
+  background-color: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+}
+
+.app.dark .app-footer {
+  background-color: #2d2d2d;
+  border-top-color: #444;
+}
+
+.app-footer p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.app.dark .app-footer p {
+  color: #999;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    text-align: center;
+  }
+}

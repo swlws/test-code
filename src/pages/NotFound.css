@@ -1,0 +1,54 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.not-found-content {
+  text-align: center;
+}
+
+.not-found-content h1 {
+  font-size: 8rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.not-found-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.app.dark .not-found-content h2 {
+  color: #e0e0e0;
+}
+
+.not-found-content p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.app.dark .not-found-content p {
+  color: #999;
+}
+
+.back-home {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.back-home:hover {
+  background-color: #0056b3;
+}
