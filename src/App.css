@@ -87,6 +87,21 @@
   color: #999;
 }
 
+.logout-nav-button {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.logout-nav-button:hover {
+  background-color: #c82333;
+}
+
 .theme-toggle {
   background: none;
   border: none;

@@ -1,16 +1,26 @@
-import { Outlet, Link, useLocation } from 'react-router-dom'
+import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { setTheme } from './store/slices/appSlice'
+import { logout } from './store/slices/userSlice'
 import './App.css'
 
 function App() {
   const location = useLocation()
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const theme = useSelector((state) => state.app.theme)
   const userInfo = useSelector((state) => state.user.userInfo)
+  const isAuthenticated = useSelector((state) => state.user.isAuthenticated)
 
   const toggleTheme = () => {
     dispatch(setTheme(theme === 'light' ? 'dark' : 'light'))
+  }
+
+  const handleLogout = () => {
+    if (window.confirm('确定要退出登录吗？')) {
+      dispatch(logout())
+      navigate('/login')
+    }
   }
 
   return (
@@ -33,12 +43,24 @@ function App() {
             </li>
             <li>
               <Link to="/user" className={location.pathname === '/user' ? 'active' : ''}>
-                用户
+                用户中心
               </Link>
             </li>
+            {isAuthenticated && (
+              <li>
+                <Link to="/user-management" className={location.pathname === '/user-management' ? 'active' : ''}>
+                  用户管理
+                </Link>
+              </li>
+            )}
           </ul>
           <div className="nav-actions">
             {userInfo && <span className="user-name">{userInfo.name || '用户'}</span>}
+            {isAuthenticated && (
+              <button onClick={handleLogout} className="logout-nav-button" title="退出登录">
+                退出
+              </button>
+            )}
             <button onClick={toggleTheme} className="theme-toggle">
               {theme === 'light' ? '🌙' : '☀️'}
             </button>

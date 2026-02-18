@@ -8,7 +8,6 @@
   color: #007bff;
 }
 
-.login-form,
 .user-info {
   background: #fff;
   padding: 2rem;
@@ -18,78 +17,36 @@
   max-width: 500px;
 }
 
-.app.dark .login-form,
 .app.dark .user-info {
   background: #2d2d2d;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.login-form h2,
 .user-info h2 {
   margin-bottom: 1.5rem;
   color: #007bff;
 }
 
-.form-group {
-  margin-bottom: 1.5rem;
+.not-logged-in {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
-  color: #333;
+.app.dark .not-logged-in {
+  background: #2d2d2d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-.app.dark .form-group label {
-  color: #e0e0e0;
+.not-logged-in p {
+  font-size: 1.1rem;
+  color: #666;
 }
 
-.form-group input {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 1rem;
-  transition: border-color 0.3s;
-}
-
-.app.dark .form-group input {
-  background-color: #1e1e1e;
-  border-color: #444;
-  color: #e0e0e0;
-}
-
-.form-group input:focus {
-  outline: none;
-  border-color: #007bff;
-}
-
-.login-button,
-.logout-button {
-  width: 100%;
-  padding: 0.75rem;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.login-button:hover,
-.logout-button:hover {
-  background-color: #0056b3;
-}
-
-.logout-button {
-  background-color: #dc3545;
-  margin-top: 1rem;
-}
-
-.logout-button:hover {
-  background-color: #c82333;
+.app.dark .not-logged-in p {
+  color: #999;
 }
 
 .info-card {

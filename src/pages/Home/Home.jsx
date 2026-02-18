@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { setLoading } from '../store/slices/appSlice'
-import { http } from '../utils/request'
+import { setLoading } from '../../store/slices/appSlice'
+import { http } from '../../utils/request'
 import './Home.css'
 
 function Home() {
