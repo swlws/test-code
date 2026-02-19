@@ -3,6 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
+  /* 全局基础字体大小：14px */
+  font-size: 14px;
 }
 
 body {
@@ -11,8 +13,18 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* 主体文字默认 14px */
+  font-size: 1rem;
 }
 
 #root {
   width: 100%;
+}
+
+/* 标题统一加粗，突出层级 */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
 }
